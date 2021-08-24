@@ -19,7 +19,7 @@ Q. write express generator command with varying options to generate express app 
 > express --css scss `APP_NAME`
 
 - ejs as template engine and sass for styling
-> express --views ejs --css scss `APP_NAME`
+> express --view ejs --css scss `APP_NAME`
 
 - pug as template engine and gitignore together
-> express --views pug --git `APP_NAME`
+> express --view pug --git `APP_NAME`
