@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Title-->
-    <title>Home | Blogs</title>
+    <title>NewBlog | Blogs</title>
     <!--Stylesheet-->
     <link rel="stylesheet" href="stylesheets/style.css" />
     <!--Font Awesome-->
@@ -23,15 +23,20 @@
       </div>
     </header>
     <!--Main-->
-    <main class="index">
+    <main class="newblog">
       <div class="container">
-        <section class="hero flex justify-around align-center">
-          <div class="img-container font-0">
-            <img class="full-width" src="/images/Blog-Logo.jpg" alt="Blog" />
-          </div>
-          <div>
-            <a class="btn btn-primary" href="/blogs">Go To Blogs</a>
-          </div>
+        <section>
+          <form class="form" action="/articles" method="POST">
+            <input type="text" name="title" placeholder="Title..." />
+            <input type="text" name="author" placeholder="Author..." />
+            <input type="text" name="tags" placeholder=" Tags..." />
+            <textarea
+              name="description"
+              rows="20"
+              placeholder="Description.."
+            ></textarea>
+            <input type="submit" value="Create" />
+          </form>
         </section>
       </div>
     </main>

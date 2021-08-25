@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Title-->
-    <title>Home | Blogs</title>
+    <title>ListBlog | Blogs</title>
     <!--Stylesheet-->
     <link rel="stylesheet" href="stylesheets/style.css" />
     <!--Font Awesome-->
@@ -23,15 +23,22 @@
       </div>
     </header>
     <!--Main-->
-    <main class="index">
+    <main class="blogs">
       <div class="container">
-        <section class="hero flex justify-around align-center">
-          <div class="img-container font-0">
-            <img class="full-width" src="/images/Blog-Logo.jpg" alt="Blog" />
-          </div>
-          <div>
-            <a class="btn btn-primary" href="/blogs">Go To Blogs</a>
-          </div>
+        <section class="buttons flex justify-center align-center">
+          <a class="btn btn-primary" href="/">Go Back</a>
+          <a class="btn btn-primary" href="/blogs/new"> Add Blogs</a>
+        </section>
+        <section class="blogs flex justify-center flex-column align-center">
+          <ul>
+            <% if(articles.length){ articles.forEach(a=>{ %>
+            <li><%= a.title %></li>
+            <% }) %> <% else{ %>
+            <li style="font-size: 1.5rem; font-style: italic; color: red">
+              No Articles Present
+            </li>
+            <% } %>
+          </ul>
         </section>
       </div>
     </main>

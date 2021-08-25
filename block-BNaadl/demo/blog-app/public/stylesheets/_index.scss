@@ -1,0 +1,11 @@
+.index {
+  .hero {
+    height: 90vh;
+    .img-container {
+      width: 45%;
+      border: 2px solid black;
+      border-radius: 3rem;
+      overflow: hidden;
+    }
+  }
+}
