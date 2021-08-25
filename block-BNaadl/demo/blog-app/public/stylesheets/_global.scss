@@ -1,0 +1,95 @@
+/*Global*/
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1480px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.padding {
+  padding: 5rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Images */
+.font-0 {
+  font-size: 0;
+}
+
+.full-width {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Headings */
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.66rem;
+}
+
+/* Buttons */
+
+.btn {
+  box-sizing: border-box;
+  display: inline-block;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.2rem;
+  outline: none;
+  border: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: black;
+  &:hover {
+    color: mediumseagreen;
+    background-color: #fff;
+    border: 2px solid black;
+  }
+}
+
+.btn-secondary {
+  color: mediumseagreen;
+
+  background-color: #fff;
+}

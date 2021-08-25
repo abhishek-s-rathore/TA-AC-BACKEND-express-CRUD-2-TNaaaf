@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Title-->
+    <title>NewBlog | Blogs</title>
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/5cc6fb9f6b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <div class="container flex justify-between align-center">
+        <a href="#">Blog</a>
+        <h1>Abhishek S. Rathore</h1>
+      </div>
+    </header>
+    <!--Main-->
+    <main class="newblog">
+      <div class="container">
+        <section>
+          <form class="form" action="/articles" method="POST">
+            <input type="text" name="title" placeholder="Title..." />
+            <input type="text" name="author" placeholder="Author..." />
+            <input type="text" name="tags" placeholder=" Tags..." />
+            <textarea
+              name="description"
+              rows="20"
+              placeholder="Description.."
+            ></textarea>
+            <input type="submit" value="Create" />
+          </form>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

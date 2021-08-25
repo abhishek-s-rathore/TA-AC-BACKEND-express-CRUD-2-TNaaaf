@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Title-->
+    <title>ListBlog | Blogs</title>
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/5cc6fb9f6b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <div class="container flex justify-between align-center">
+        <a href="#">Blog</a>
+        <h1>Abhishek S. Rathore</h1>
+      </div>
+    </header>
+    <!--Main-->
+    <main class="blogs">
+      <div class="container">
+        <section class="buttons flex justify-center align-center">
+          <a class="btn btn-primary" href="/">Go Back</a>
+          <a class="btn btn-primary" href="/blogs/new"> Add Blogs</a>
+        </section>
+        <section class="blogs flex justify-center flex-column align-center">
+          <ul>
+            <% if(articles.length){ articles.forEach(a=>{ %>
+            <li><%= a.title %></li>
+            <% }) %> <% else{ %>
+            <li style="font-size: 1.5rem; font-style: italic; color: red">
+              No Articles Present
+            </li>
+            <% } %>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
