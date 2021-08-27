@@ -1,0 +1,13 @@
+.blogs {
+  .blog {
+    border: 1px solid black;
+    width: 100%;
+    flex: 0 1 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    button {
+      margin-top: 0.5rem;
+    }
+  }
+}

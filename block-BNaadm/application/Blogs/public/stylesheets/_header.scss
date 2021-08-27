@@ -1,0 +1,16 @@
+header {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  .logo {
+    font-family: 'Tangerine', cursive;
+    columns: black;
+    font-size: 3.25rem;
+    font-weight: 700;
+    span {
+      color: orange;
+    }
+  }
+  a {
+    color: black;
+    font-size: 1.5rem;
+  }
+}
