@@ -33,34 +33,64 @@
     <!--Header-->
     <header>
       <div class="container flex justify-between align-center">
-        <a class="logo" href="#"> <span>E</span>lib</a>
-        <a href="#"><h3>Library</h3></a>
+        <a class="logo" href="/"> <span>E</span>lib</a>
+        <a href="/books"><h3>Library</h3></a>
       </div>
     </header>
     <main class="newBook container">
       <h2>Add Book</h2>
-      <form action="/books/new">
-        <input type="text" name="title" placeholder="Book's Title" />
-        <input type="text" name="name" placeholder="Book's Author" />
-        <input type="email" name="email" placeholder="Author's Email" />
-        <input type="text" name="country" placeholder="Author's Nationality" />
+      <form action="/books/<%= book._id %>" method="POST">
+        <input
+          type="text"
+          name="title"
+          placeholder="Book's Title"
+          value="<%= book.title %>"
+        />
+        <input
+          type="text"
+          name="name"
+          placeholder="Book's Author"
+          value="<%= book.author %>"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Author's Email"
+          value="<%= book.email %>"
+        />
+        <input
+          type="text"
+          name="country"
+          placeholder="Author's Nationality"
+          value="<%= book.country %>"
+        />
         <input
           type="text"
           name="publication"
           placeholder="Book's Publication"
+          value="<%= book.publication %>"
         />
-        <input type="number" name="isbn" placeholder="Book's ISBN" />
-        <input type="text" name="pages" placeholder="Number Of Pages" />
+        <input
+          type="number"
+          name="isbn"
+          placeholder="Book's ISBN"
+          value="<%= book.isbn %>"
+        />
+        <input
+          type="text"
+          name="pages"
+          placeholder="Number Of Pages"
+          value="<%= book.pages %>"
+        />
         <input
           type="text"
           name="catagories"
           placeholder="Book's Categories(Separated By Commas)"
+          value="<%= book.catagories %>"
         />
-        <textarea
-          name="summery"
-          rows="10"
-          placeholder="Summery Of Book"
-        ></textarea>
+        <textarea name="summery" rows="10" placeholder="Summery Of Book">
+<%= book.summery %></textarea
+        >
         <input type="file" name="cover" id="cover" />
         <input type="submit" value="Add Book" id="addbook" />
       </form>

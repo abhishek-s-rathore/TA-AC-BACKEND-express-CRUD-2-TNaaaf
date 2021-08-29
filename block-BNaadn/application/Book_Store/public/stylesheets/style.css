@@ -323,10 +323,12 @@ header {
 
 .books .authors,
 .books .generes {
+  text-align: start;
   border: 1px solid black;
   border-radius: 0.5rem;
-  height: 35vh;
-  overflow: auto; }
+  height: 33vh;
+  overflow: auto;
+  margin-bottom: 0.5rem; }
 
 .books .generes::-webkit-scrollbar {
   display: none; }
@@ -334,8 +336,11 @@ header {
 .books .authors::-webkit-scrollbar {
   display: none; }
 
+.books .addbook:hover {
+  cursor: pointer; }
+
 .books .book {
-  margin: 1rem auto;
+  margin: 1.1rem;
   text-align: center;
   padding: 0.5rem;
   border-radius: 0.25rem;
@@ -351,7 +356,7 @@ header {
   height: 90vh; }
   .bookDetails article {
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1.1rem;
     width: 80%;
     height: 100%;
     border: 1px solid gray;
@@ -370,7 +375,7 @@ header {
       border: 1px solid gray;
       box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       border-radius: 0.5rem;
-      margin: 2rem auto; }
+      margin: 1rem auto; }
     .bookDetails article h1 {
       margin-bottom: 0.5rem;
       font-weight: 700;

@@ -33,67 +33,56 @@
     <!--Header-->
     <header>
       <div class="container flex justify-between align-center">
-        <a class="logo" href="#"> <span>E</span>lib</a>
-        <a href="#"><h3>Library</h3></a>
+        <a class="logo" href="/"> <span>E</span>lib</a>
+        <a href="/books"><h3>Library</h3></a>
       </div>
     </header>
     <div class="books container flex justify-between align-center">
-      <aside class="flex-23 aside">
+      <aside class="flex-23 aside" style="text-align: center">
         <h2 style="text-align: center">Authores</h2>
         <div class="authors">
-          <a href="#" class="btn btn-tertiory"> Author1</a>
-          <a href="#" class="btn btn-tertiory"> Author2</a>
+          <% var arr = []; %>
+          <!--  -->
+          <% books.forEach(book=>{ %>
+          <!--  -->
+          <% if(!arr.includes(book.email)){ %>
+          <!--  -->
+          <% arr.push({"name":book.name,"email":book.email}); %>
+          <!--  -->
+          <% }; %>
+          <!--  -->
+          <% });%>
+          <!--  -->
+          <% arr.forEach(book=>{ %>
+
+          <a href="#" class="btn btn-tertiory"> <%= book %></a>
+          <% }); %>
         </div>
         <h2 style="text-align: center">Generes</h2>
         <div class="generes">
           <a href="#" class="btn btn-tertiory"> Genere1</a>
           <a href="#" class="btn btn-tertiory"> Genere2</a>
         </div>
+        <a href="/books/new"
+          ><button class="btn btn-secondary addbook">Add Book</button></a
+        >
       </aside>
       <main class="flex-75 main flex justify-start align-start flex-wrap">
+        <% if(books.length){books.forEach(book=>{ %>
         <article class="book flex-30">
           <div>
             <img class="full-width" src="/images/kate-linn.jpg" alt="Image" />
           </div>
-          <h1>Kate Linn</h1>
-          <a href="#"><button class="btn btn-secondary">View</button></a>
+          <h1><%= book.title %></h1>
+          <a href="/books/<%= book._id %>"
+            ><button class="btn btn-secondary">View</button></a
+          >
         </article>
-
-        <article class="book flex-30">
-          <div>
-            <img class="full-width" src="/images/kate-linn-3.jpg" alt="Image" />
-          </div>
-          <h1>Kate Linn</h1>
-          <a href="#"><button class="btn btn-secondary">View</button></a>
-        </article>
-        <article class="book flex-30">
-          <div>
-            <img class="full-width" src="/images/kate-linn-2.jpg" alt="Image" />
-          </div>
-          <h1>Kate Linn</h1>
-          <a href="#"><button class="btn btn-secondary">View</button></a>
-        </article>
-        <article class="book flex-30">
-          <div>
-            <img class="full-width" src="/images/kate-linn-3.jpg" alt="Image" />
-          </div>
-          <h1>Kate Linn</h1>
-          <a href="#"><button class="btn btn-secondary">View</button></a>
-        </article>
-        <article class="book flex-30">
-          <div>
-            <img class="full-width" src="/images/kate-linn.jpg" alt="Image" />
-          </div>
-          <h1>Kate Linn</h1>
-          <a href="#"><button class="btn btn-secondary">View</button></a>
-        </article>
-        <article class="book flex-30">
-          <div>
-            <img class="full-width" src="/images/kate-linn-2.jpg" alt="Image" />
-          </div>
-          <h1>Kate Linn</h1>
-          <a href="#"><button class="btn btn-secondary">View</button></a>
-        </article>
+        <% });} else{ %>
+        <h2 style="text-align: center; width: 100%; color: rgb(104, 104, 243)">
+          No Books Added Yet
+        </h2>
+        <% } %>
       </main>
     </div>
   </body>

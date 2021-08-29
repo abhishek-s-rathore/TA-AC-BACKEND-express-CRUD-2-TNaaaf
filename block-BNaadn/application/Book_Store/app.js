@@ -10,8 +10,7 @@ var mongoose = require('mongoose');
 // Requiring the routes
 var indexRouter = require('./routes/index');
 var booksRouter = require('./routes/books');
-var authorsRouter = require('./routes/authors');
-var commentsRouter = require('./routes/comments');
+// var authorsRouter = require('./routes/authors');
 
 // Connecting to database
 mongoose.connect(
@@ -47,8 +46,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Using routing middlewares
 app.use('/', indexRouter);
 app.use('/books', booksRouter);
-app.use('/comments', commentsRouter);
-app.use('/authors', authorsRouter);
+// app.use('/authors', authorsRouter);
 
 // Catch 404  error and forward to error handler
 app.use(function (req, res, next) {
