@@ -1,0 +1,51 @@
+.newBook {
+  h2 {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  form {
+    width: 50%;
+    background-color: cornsilk;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    input {
+      width: 100%;
+      height: 2rem;
+      margin-bottom: 1rem;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+      padding-left: 0.5rem;
+      border: none;
+      border-bottom: 1px solid black;
+      background-color: rgb(171, 171, 248);
+      &::placeholder {
+        color: black;
+      }
+    }
+    textarea {
+      width: 100%;
+      margin-bottom: 1rem;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+      padding-left: 0.5rem;
+      padding-top: 0.5rem;
+      border: none;
+      border-bottom: 1px solid black;
+      background-color: rgb(171, 171, 248);
+      &::placeholder {
+        color: black;
+      }
+    }
+    #cover {
+      padding-left: 0.5rem;
+      padding-top: 0.3rem;
+    }
+    #addbook:hover {
+      cursor: pointer;
+      background-color: rgb(126, 126, 248);
+      font-size: 0.9rem;
+    }
+  }
+}
