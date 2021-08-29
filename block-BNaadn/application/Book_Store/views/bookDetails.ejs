@@ -33,8 +33,8 @@
     <!--Header-->
     <header>
       <div class="container flex justify-between align-center">
-        <a class="logo" href="#"> <span>E</span>lib</a>
-        <a href="#"><h3>Library</h3></a>
+        <a class="logo" href="/"> <span>E</span>lib</a>
+        <a href="/books"><h3>Library</h3></a>
       </div>
     </header>
     <main class="bookDetails container">
@@ -48,12 +48,11 @@
               alt="Image"
             />
           </div>
-
           <div class="flex-48 info">
-            <h1 style="margin-top: -0.5rem">A to Z</h1>
-            <p class="pages">Pages: 1</p>
-            <p class="isbn">ISBN: #121762318923109213</p>
-            <p class="public">Publication: Mc Graw Hill</p>
+            <h1 style="margin-top: -0.5rem"><%= book.title %></h1>
+            <p class="pages">Pages: <%= book.pages %></p>
+            <p class="isbn">ISBN: #<%= book.isbn %></p>
+            <p class="public">Publication: <%= book.publication %></p>
             <div class="category flex justify-start align-center flex-wrap">
               <p class="generes">Generes:</p>
               <span class="tag">Friction</span>
@@ -68,26 +67,24 @@
                   border-radius: 0.5rem;
                 "
               >
-                <cite class="name">Name: Author1</cite>
-                <p class="email">Email: author1@gmail.com</p>
-                <p class="country">Country: India</p>
+                <cite class="name">Name: <%= book.name %></cite>
+                <p class="email">Email: <%= book.email %></p>
+                <p class="country">Country: <%= book.country %></p>
               </div>
             </div>
           </div>
         </div>
-        <p class="summary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae numquam,
-          sunt accusantium nesciunt atque consectetur incidunt magnam qui
-          corrupti tempora eius consequatur consequuntur fuga culpa, cumque
-          magni earum nobis sequi. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Quae numquam, sunt accusantium nesciunt atque
-          consectetur incidunt magnam qui corrupti tempora eius consequatur
-          consequuntur fuga culpa, cumque magni earum nobis sequi.
-        </p>
+        <p class="summary"><%= book.summery %></p>
         <div class="flex justify-center align-center">
-          <a href=""><button class="btn btn-secondary">Edit</button></a>
-          <a href=""><button class="btn btn-secondary">Delete</button></a>
-          <a href=""><button class="btn btn-secondary">Go Back</button></a>
+          <a href="/books/<%= book._id %>/edit"
+            ><button class="btn btn-secondary">Edit</button></a
+          >
+          <a href="/books/<%= book._id %>/delete"
+            ><button class="btn btn-secondary">Delete</button></a
+          >
+          <a href="/books"
+            ><button class="btn btn-secondary">Go Back</button></a
+          >
         </div>
       </article>
     </main>
