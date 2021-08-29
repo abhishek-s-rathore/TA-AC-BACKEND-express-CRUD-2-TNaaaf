@@ -1,0 +1,69 @@
+.bookDetails {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  height: 90vh;
+  article {
+    margin: 0 auto;
+    padding: 1.1rem;
+    width: 80%;
+    height: 100%;
+    border: 1px solid gray;
+    border-radius: 0.75em;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    .info,
+    .image {
+      height: 35rem;
+      padding: 1rem;
+      border: 1px solid gray;
+      border-radius: 0.75em;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    .summary {
+      padding: 1rem;
+      width: 100%;
+      border: 1px solid gray;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      border-radius: 0.5rem;
+      margin: 1rem auto;
+    }
+    h1 {
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: rgb(121, 2, 121);
+    }
+
+    cite,
+    .isbn,
+    .generes,
+    .country {
+      color: rgb(255, 115, 0);
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+    .pages,
+    .public,
+    .author,
+    .email {
+      width: 100%;
+      color: black;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid blue;
+      padding: 0.4rem 0.8rem;
+      background-color: rgb(145, 145, 235);
+      color: 10rem;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+      margin-left: 1rem;
+    }
+    .btn {
+      margin: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,455 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.flex {
+  display: flex; }
+
+.justify-between {
+  justify-content: space-between; }
+
+.justify-start {
+  justify-content: flex-start; }
+
+.justify-end {
+  justify-content: flex-end; }
+
+.justify-around {
+  justify-content: space-around; }
+
+.justify-evenly {
+  justify-content: space-evenly; }
+
+.justify-center {
+  justify-content: center; }
+
+.align-center {
+  align-items: center; }
+
+.align-start {
+  align-items: flex-start; }
+
+.align-end {
+  align-items: flex-end; }
+
+.align-between {
+  align-items: space-between; }
+
+.align-around {
+  align-items: space-around; }
+
+.align-evenly {
+  align-items: space-evenly; }
+
+.flex-column {
+  flex-direction: column; }
+
+.flex-wrap {
+  flex-wrap: wrap; }
+
+.flex-20 {
+  flex: 0 1 20%; }
+
+.flex-23 {
+  flex: 0 1 23%; }
+
+.flex-30 {
+  flex: 0 1 30%; }
+
+.flex-32 {
+  flex: 0 1 32%; }
+
+.flex-40 {
+  flex: 0 1 40%; }
+
+.flex-48 {
+  flex: 0 1 48%; }
+
+.flex-50 {
+  flex: 0 1 50%; }
+
+.flex-60 {
+  flex: 0 1 60%; }
+
+.flex-75 {
+  flex: 0 1 75%; }
+
+.flex-100 {
+  flex: 0 1 100%; }
+
+/*Global*/
+html {
+  font-size: 16px; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  background-color: whitesmoke; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+.container {
+  max-width: 1580px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem; }
+
+.padding {
+  padding: 5rem 0; }
+
+a {
+  text-decoration: none; }
+
+/* Images */
+.font-0 {
+  font-size: 0; }
+
+.full-width {
+  width: 100%;
+  object-fit: cover; }
+
+/* Headings */
+h1 {
+  font-size: 3rem; }
+
+h2 {
+  font-size: 2.5rem; }
+
+h3 {
+  font-size: 2rem; }
+
+h4 {
+  font-size: 1.5rem; }
+
+h5 {
+  font-size: 1rem; }
+
+h6 {
+  font-size: 0.66rem; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  outline: none;
+  border: none; }
+
+.btn-primary {
+  font-size: 1.8rem;
+  color: #fff;
+  background-color: black; }
+  .btn-primary:hover {
+    box-shadow: 6px 6px 12px #8686fd, -3px -3px 8px #8686fd;
+    cursor: pointer; }
+
+.btn-secondary {
+  color: #ff7300;
+  font-size: 1rem;
+  background-color: black;
+  padding: 0.6rem 1.2rem; }
+
+.btn-tertiory {
+  color: black;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: #8e8ef6;
+  border: 1px solid blue;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem; }
+
+header {
+  padding: 0.75rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 225, 0.5); }
+  header .logo {
+    font-family: 'Tourney', cursive;
+    font-size: 2.5rem; }
+    header .logo span {
+      font-size: 3rem;
+      color: #ff7300;
+      font-weight: 600; }
+  header h3 {
+    font-weight: 600;
+    font-size: 2.2rem;
+    color: #ff7300;
+    text-shadow: 1px 1px 2px #0000e1; }
+
+.home .hero {
+  height: 90vh; }
+  .home .hero p span {
+    color: blue;
+    font-weight: 500; }
+
+.books .aside,
+.books .main {
+  border: 1px solid gray;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  height: 87vh;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+  overflow: auto; }
+  .books .aside::-webkit-scrollbar,
+  .books .main::-webkit-scrollbar {
+    display: none; }
+
+.books .authors,
+.books .generes {
+  text-align: start;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  height: 33vh;
+  overflow: auto;
+  margin-bottom: 0.5rem; }
+
+.books .generes::-webkit-scrollbar {
+  display: none; }
+
+.books .authors::-webkit-scrollbar {
+  display: none; }
+
+.books .addbook:hover {
+  cursor: pointer; }
+
+.books .book {
+  margin: 1.1rem;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid gray;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); }
+  .books .book h1 {
+    font-size: 1.5rem;
+    text-align: center; }
+
+.bookDetails {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  height: 90vh; }
+  .bookDetails article {
+    margin: 0 auto;
+    padding: 1.1rem;
+    width: 80%;
+    height: 100%;
+    border: 1px solid gray;
+    border-radius: 0.75em;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); }
+    .bookDetails article .info,
+    .bookDetails article .image {
+      height: 35rem;
+      padding: 1rem;
+      border: 1px solid gray;
+      border-radius: 0.75em;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); }
+    .bookDetails article .summary {
+      padding: 1rem;
+      width: 100%;
+      border: 1px solid gray;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      border-radius: 0.5rem;
+      margin: 1rem auto; }
+    .bookDetails article h1 {
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: #790279; }
+    .bookDetails article cite,
+    .bookDetails article .isbn,
+    .bookDetails article .generes,
+    .bookDetails article .country {
+      color: #ff7300;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 1rem; }
+    .bookDetails article .pages,
+    .bookDetails article .public,
+    .bookDetails article .author,
+    .bookDetails article .email {
+      width: 100%;
+      color: black;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 1rem; }
+    .bookDetails article .tag {
+      display: inline-block;
+      border: 1px solid blue;
+      padding: 0.4rem 0.8rem;
+      background-color: #9191eb;
+      color: 10rem;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+      margin-left: 1rem; }
+    .bookDetails article .btn {
+      margin: 0.5rem; }
+
+.newBook h2 {
+  text-align: center;
+  margin-top: 1rem; }
+
+.newBook form {
+  width: 50%;
+  background-color: cornsilk;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); }
+  .newBook form input {
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 1rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    padding-left: 0.5rem;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: #ababf8; }
+    .newBook form input::placeholder {
+      color: black; }
+  .newBook form textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: #ababf8; }
+    .newBook form textarea::placeholder {
+      color: black; }
+  .newBook form #cover {
+    padding-left: 0.5rem;
+    padding-top: 0.3rem; }
+  .newBook form #addbook:hover {
+    cursor: pointer;
+    background-color: #7e7ef8;
+    font-size: 0.9rem; }
+
+/*# sourceMappingURL=style.css.map */

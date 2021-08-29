@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Title-->
+    <title>Document</title>
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/5cc6fb9f6b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <div class="container flex justify-between align-center">
+        <a class="logo" href="/"> <span>E</span>lib</a>
+        <a href="/books"><h3>Library</h3></a>
+      </div>
+    </header>
+    <main class="bookDetails container">
+      <article class="book-container">
+        <div class="flex justify-between align-start">
+          <div class="flex-48 image">
+            <img
+              style="height: 100%"
+              class="full-width"
+              src="/images/kate-linn.jpg"
+              alt="Image"
+            />
+          </div>
+          <div class="flex-48 info">
+            <h1 style="margin-top: -0.5rem"><%= book.title %></h1>
+            <p class="pages">Pages: <%= book.pages %></p>
+            <p class="isbn">ISBN: #<%= book.isbn %></p>
+            <p class="public">Publication: <%= book.publication %></p>
+            <div class="category flex justify-start align-center flex-wrap">
+              <p class="generes">Generes:</p>
+              <span class="tag">Friction</span>
+              <span class="tag">Technology</span>
+              <span class="author">Author: </span>
+              <div
+                style="
+                  border: 1px solid black;
+                  margin: 1rem auto;
+                  padding: 0.5rem;
+                  width: 100%;
+                  border-radius: 0.5rem;
+                "
+              >
+                <cite class="name">Name: <%= book.name %></cite>
+                <p class="email">Email: <%= book.email %></p>
+                <p class="country">Country: <%= book.country %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="summary"><%= book.summery %></p>
+        <div class="flex justify-center align-center">
+          <a href="/books/<%= book._id %>/edit"
+            ><button class="btn btn-secondary">Edit</button></a
+          >
+          <a href="/books/<%= book._id %>/delete"
+            ><button class="btn btn-secondary">Delete</button></a
+          >
+          <a href="/books"
+            ><button class="btn btn-secondary">Go Back</button></a
+          >
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
